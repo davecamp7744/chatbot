@@ -10,6 +10,11 @@ html {
   color: #330092;
   background-color: #f0f0f0;
 }
+.saludo{
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #03093a;
+}
 /*
 globo
 */
