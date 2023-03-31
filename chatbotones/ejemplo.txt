@@ -1,0 +1,26 @@
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/message', methods=['POST'])
+def message():
+    message = request.form['message']
+    if message == 'Concepto':
+        info = 'Es una recopilación organizada de información o datos estructurados, que normalmente se almacena de forma electrónica en un sistema informático.'
+        return f"<button>Hola {info} </button>"
+        # return 'Hola, ¿cómo estás?'
+    elif message == 'Uso':
+        info = 'Una base de datos es una herramienta para recopilar y organizar información. Las bases de datos pueden almacenar información sobre personas, productos, pedidos u otras cosas. Muchas bases de datos comienzan como una lista en una hoja de cálculo o en un programa de procesamiento de texto.'
+        return f"<button>Hola {info} </button>"
+        # return 'Hasta luego!'
+    else:
+        return 'Lo siento, no entendí tu mensaje.'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+#SET FLASK_APP=app.py
+#python app.py
