@@ -1,3 +1,4 @@
+//FUNCION PARA EL TEXTO
 function send_message(message) {
 $.ajax({
     type: 'POST',
@@ -8,15 +9,15 @@ $.ajax({
     }
 });
 }
+
+
+//OCULTAR BUTTON
 const button = document.querySelector('#mi-boton');
 button.addEventListener('click', () => {
     button.style.display = 'none';
 });
 
-
-
-
-
+//FUNCION PARA EL NOMBRE
 function send() {
     var userinput = document.getElementById("userinput").value;
     document.getElementById("chatbox").innerHTML += "<p><strong>Tú:</strong> " + userinput + "</p>";
@@ -29,10 +30,7 @@ function send() {
     xhttp.open("GET", "/get?msg=" + userinput, true);
     xhttp.send();
     document.getElementById("userinput").value = "";
-}
-
-
-
+};
 
 // var nombre = null;
 // var status = null;
