@@ -60,7 +60,7 @@ def message():
         return info 
     #===============================================================================================================================
     elif message == 'EstructurasControl':
-        texto = "texto de concepto"
+        texto = "Tema de Estructura de control"
         info = [f"<p class='comentario burbuja'>{texto}</p>" , EstructurasControl, regresar]
         return info 
     elif message == 'subalgoritmos':
@@ -80,7 +80,7 @@ def message():
     
     #===============================================================================================================================
     elif message == 'Metodologia':
-        texto = "texto de Metodologia"
+        texto = "Tema de Metodologia"
         info = [f"<p class='comentario burbuja'>{texto}</p>" , Metodologia, regresar]
         return info 
     elif message == 'significadometo':
@@ -95,7 +95,7 @@ def message():
         return info 
     #===============================================================================================================================
     elif message == 'Codificacion':
-        texto = "texto de Codificacion"
+        texto = "Tema de Codificacion"
         info = [f"<p class='comentario burbuja'>{texto}</p>" , Codificacion, regresar]
         return info 
     elif message == 'significadocodi':
@@ -114,7 +114,7 @@ def message():
         return info  
     #===============================================================================================================================
     elif message == 'Algoritmos':
-        texto = "texto de uso"
+        texto = "Tema de algoritmos"
         info = [f"<p class='comentario burbuja'>{texto}</p>" , algoritmos, regresar]
         return info
     elif message == 'significado':
