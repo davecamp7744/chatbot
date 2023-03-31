@@ -16,7 +16,10 @@ const button = document.querySelector('#mi-boton');
 button.addEventListener('click', () => {
     button.style.display = 'none';
 });
-
+const btnenvi = document.querySelector('#btn-enviar');
+btnenvi.addEventListener('click', () => {
+    btnenvi.style.display = 'none';
+})
 //FUNCION PARA EL NOMBRE
 function send() {
     var userinput = document.getElementById("userinput").value;
@@ -31,6 +34,12 @@ function send() {
     xhttp.send();
     document.getElementById("userinput").value = "";
 };
+
+
+// const inpu = document.querySelector('#userinput');
+// inpu.addEventListener('click', () => {
+//     inpu.style.display = 'none';
+// });
 
 // var nombre = null;
 // var status = null;

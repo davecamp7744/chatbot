@@ -1,6 +1,15 @@
 from flask import Flask, request, Markup, render_template
 
 app = Flask(__name__)
+global usuario
+@app.route("/get")
+def get_bot_response():
+    user_text = request.args.get('msg')
+    # Aquí es donde puedes integrar la lógica de tu chatbot
+    # En este ejemplo, simplemente devolveremos una respuesta genérica
+    usuario = user_text
+    return "Hola: " + user_text + " un gusto ahora puedes comenzar"
+
 
 @app.route('/') 
 def index():
@@ -142,15 +151,6 @@ def message():
     else:
         return 'Lo siento, no entendí tu mensaje.'
     
-@app.route("/get")
-def get_bot_response():
-    user_text = request.args.get('msg')
-    # Aquí es donde puedes integrar la lógica de tu chatbot
-    # En este ejemplo, simplemente devolveremos una respuesta genérica
-    return "Hola: " + user_text + " un gusto ahora puedes comenzar"
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

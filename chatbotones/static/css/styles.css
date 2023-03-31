@@ -29,6 +29,14 @@ globo
   background-color: #f0f0f0;
   color: #03093a;
 }
+
+.entrada{
+  width: 500px;
+  margin-left: 20px;
+  border-color: #03093a;
+  border-radius: 5px;
+}
+
 .comentarios{
   width: 400px;
 }
