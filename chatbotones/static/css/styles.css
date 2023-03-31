@@ -19,6 +19,17 @@ globo
   width: auto;
   color: #fff;
 } */
+.enviar{
+  width: 200px;
+  padding: 10px;
+  background-color: #03093a;
+  color: #f0f0f0;
+  border-color: #09f1e6;
+}
+.enviar:hover{
+  background-color: #f0f0f0;
+  color: #03093a;
+}
 .comentarios{
   width: 400px;
 }

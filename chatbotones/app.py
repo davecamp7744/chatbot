@@ -9,7 +9,8 @@ buttons = [
         Markup('<button onclick="send_message(\'Algoritmos\')" class="custom-btn btn-16">Algoritmos</button>'),
         Markup('<button onclick="send_message(\'EstructurasControl\')" class="custom-btn btn-16">Estructuras de Control de algoritmos</button>'),
         Markup('<button onclick="send_message(\'Metodologia\')" class="custom-btn btn-16">Metodología del desarrollo de programas</button>'),
-        Markup('<button onclick="send_message(\'Codificacion\')" class="custom-btn btn-16">Codificacion</button>')
+        Markup('<button onclick="send_message(\'Codificacion\')" class="custom-btn btn-16">Codificacion</button>'),
+        Markup('<button onclick="send_message(\'salir\')" class="custom-btn btn-16">Salir</button>')
     ]
 butop1 = '<button onclick="send_message(\'op1\')" class="custom-btn btn-16">op1</button>'
 butop2 = '<button onclick="send_message(\'op2\')" class="custom-btn btn-16">op2</button>'
@@ -124,21 +125,9 @@ def message():
         info = [youtube_id, '<br>' ,algoritmos, regresar]
         return info
     #===============================================================================================================================
-    elif message == 'op1':
-        texto = "texto de opcion 1"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , butop1, butop2, butop3, butop4, regresar]
-        return info 
-    elif message == 'op2':
-        texto = "texto de opcion 2"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , butop1, butop2, butop3, butop4, regresar]
-        return info 
-    elif message == 'op3':
-        texto = "texto de opcion 3"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , butop1, butop2, butop3, butop4, regresar]
-        return info 
         # return 'Hasta luego!'
-    elif message == 'op4':
-        texto = "texto de opcion 4"
+    elif message == 'salir':
+        texto = "Hasta luego"
         info = [f"<p class='comentario burbuja'>{texto}</p>" , butop1, butop2, butop3, butop4, regresar]
         return info 
     elif message == 'Tipos':
@@ -153,6 +142,16 @@ def message():
     else:
         return 'Lo siento, no entendí tu mensaje.'
     
+@app.route("/get")
+def get_bot_response():
+    user_text = request.args.get('msg')
+    # Aquí es donde puedes integrar la lógica de tu chatbot
+    # En este ejemplo, simplemente devolveremos una respuesta genérica
+    return "Hola: " + user_text + "Un gusto ahora puedes comenzar"
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
