@@ -20,6 +20,10 @@ const btnenvi = document.querySelector('#btn-enviar');
 btnenvi.addEventListener('click', () => {
     btnenvi.style.display = 'none';
 })
+// const op = document.querySelector('#botones');
+// op.addEventListener('click', () => {
+//     op.style.display = 'none';
+// })
 //FUNCION PARA EL NOMBRE
 function send() {
     var userinput = document.getElementById("userinput").value;

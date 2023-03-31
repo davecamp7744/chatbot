@@ -15,11 +15,11 @@ def get_bot_response():
 def index():
     return render_template('index.html')
 buttons = [
-        Markup('<button id="mi-boton" onclick="send_message(\'Algoritmos\')" class="custom-btn btn-16">Algoritmos</button>'),
-        Markup('<button id="mi-boton" onclick="send_message(\'EstructurasControl\')" class="custom-btn btn-16">Estructuras de Control de algoritmos</button>'),
-        Markup('<button id="mi-boton" onclick="send_message(\'Metodologia\')" class="custom-btn btn-16">Metodología del desarrollo de programas</button>'),
-        Markup('<button id="mi-boton" onclick="send_message(\'Codificacion\')" class="custom-btn btn-16">Codificacion</button>'),
-        Markup('<button id="mi-boton" onclick="send_message(\'salir\')" class="custom-btn btn-16">Salir</button>')
+        Markup('<button onclick="send_message(\'Algoritmos\')" class="custom-btn btn-16">Algoritmos</button>'),
+        Markup('<button onclick="send_message(\'EstructurasControl\')" class="custom-btn btn-16">Estructuras de Control de algoritmos</button>'),
+        Markup('<button onclick="send_message(\'Metodologia\')" class="custom-btn btn-16">Metodología del desarrollo de programas</button>'),
+        Markup('<button onclick="send_message(\'Codificacion\')" class="custom-btn btn-16">Codificacion</button>'),
+        Markup('<button onclick="send_message(\'salir\')" class="custom-btn btn-16">Salir</button>')
     ]
 butop1 = '<button onclick="send_message(\'op1\')" class="custom-btn btn-16">op1</button>'
 butop2 = '<button onclick="send_message(\'op2\')" class="custom-btn btn-16">op2</button>'
