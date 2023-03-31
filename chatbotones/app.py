@@ -128,7 +128,7 @@ def message():
         # return 'Hasta luego!'
     elif message == 'salir':
         texto = "Hasta luego"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , butop1, butop2, butop3, butop4, regresar]
+        info = [f"<p class='comentario burbuja'>{texto}</p>"]
         return info 
     elif message == 'Tipos':
         texto = "texto de tipos"
