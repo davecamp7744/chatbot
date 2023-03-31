@@ -34,9 +34,9 @@ globo
 
 .burbuja{
   position: relative;
-  background-color: #fff;
+  background-color: #03093a;
   padding: 20px;
-  color: #222;
+  color: #ffffff;
   border-radius: 3px;
   margin-left: 20px;
 }
@@ -54,7 +54,7 @@ globo
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 
-  border-right: 15px solid #fff;
+  border-right: 15px solid #03093a;
 }
 /*
 Botones
@@ -62,7 +62,7 @@ Botones
 button {
   margin: 20px;
   overflow: visible;
-  border-color: #09f1e6;
+  border-color: #f12409;
 
 }
 
