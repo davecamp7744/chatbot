@@ -150,9 +150,8 @@ def message():
     else:
         return 'Lo siento, no entendí tu mensaje.'
     
-if __name__ == '__main__':
-    app.run(debug=True)
-
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 #SET FLASK_APP=app.py
 #python app.py
