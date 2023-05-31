@@ -17,7 +17,8 @@ buttons = [
         Markup('<button onclick="send_message(\'EstructurasControl\')" class="custom-btn btn-16">Estructuras de Control de algoritmos</button>'),
         Markup('<button onclick="send_message(\'Metodologia\')" class="custom-btn btn-16">Metodología del desarrollo de programas</button>'),
         Markup('<button onclick="send_message(\'Codificacion\')" class="custom-btn btn-16">Codificacion</button>'),
-        Markup('<button onclick="send_message(\'salir\')" class="custom-btn btn-16">Salir</button>')
+        Markup('<button onclick="send_message(\'salir\')" class="custom-btn btn-16">Salir</button>'),
+
     ]
 butop1 = '<button onclick="send_message(\'op1\')" class="custom-btn btn-16">op1</button>'
 butop2 = '<button onclick="send_message(\'op2\')" class="custom-btn btn-16">op2</button>'
@@ -59,7 +60,7 @@ def message():
     #===============================================================================================================================
     elif message == 'EstructurasControl':
         texto = "Tema de Estructura de control"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , EstructurasControl, regresar]
+        info = [f"<p class='comentarior burbujar'>{texto}</p>" , EstructurasControl, regresar]
         return info 
     elif message == 'subalgoritmos':
         texto = "Uno de los métodos fundamentales para resolver un problema es dividirlo en problemas más pequeños, llamados subproblemas. Estos problemas pueden a su vez dividirse repetidamente en problemas más pequeños hasta que los problemas sean de fácil solución."
@@ -79,7 +80,7 @@ def message():
     #===============================================================================================================================
     elif message == 'Metodologia':
         texto = "Tema de Metodologia"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , Metodologia, regresar]
+        info = [f"<p class='comentarior burbujar'>{texto}</p>" , Metodologia, regresar]
         return info 
     elif message == 'significadometo':
         texto = "Diagramas de flujo.- permiten crear algoritmos mediante símbolos gráficos que representan operaciones específicas y que indican la secuencia de las operaciones mediante flechas. Están regidos por normas ISO."
@@ -89,12 +90,12 @@ def message():
         texto1 = "<p>Los algoritmos se pueden clasificar de una manera general en dos tipos básicos:</p>"
         texto2 = "<li>Cuantitativos: Son los algoritmos en los que se utilizan ya cálculos cálculos numéricos durante la definición del propio algoritmo</li>"
         texto3 = "<li>Cualitativos: Son los algoritmos que describen los pasos utilizando palabras.</li>"
-        info = [f"<ul class='comentario burbuja'>{texto1}{texto2}{texto3}</ul>" , Metodologia, regresar]
+        info = [f"<ul class=' burbuja'>{texto1}{texto2}{texto3}</ul>" , Metodologia, regresar]
         return info 
     #===============================================================================================================================
     elif message == 'Codificacion':
         texto = "Tema de Codificacion"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , Codificacion, regresar]
+        info = [f"<p class='comentarior burbujar'>{texto}</p>" , Codificacion, regresar]
         return info 
     elif message == 'significadocodi':
         texto = "Una vez que los algoritmos de una aplicación han sido diseñados, ya se puede iniciar la fase de codificación. En esta etapa se tienen que traducir dichos algoritmos a un lenguaje de programación específico; es decir, las acciones definidas en los algoritmos hay que convertirlas a instrucciones."
@@ -113,7 +114,7 @@ def message():
     #===============================================================================================================================
     elif message == 'Algoritmos':
         texto = "Tema de algoritmos"
-        info = [f"<p class='comentario burbuja'>{texto}</p>" , algoritmos, regresar]
+        info = [f"<p class='comentarior burbujar'>{texto}</p>" , algoritmos, regresar]
         return info
     elif message == 'significado':
         texto = "Se puede entender un algoritmo como una secuencia de pasos finitos bien definidos que resuelven un problema."
@@ -135,7 +136,7 @@ def message():
         # return 'Hasta luego!'
     elif message == 'salir':
         texto = "Hasta luego"
-        info = [f"<p class='comentario burbuja'>{texto}</p>"]
+        info = [f"<p id='estado' class='comentario burbuja'>{texto}</p>"]
         return info 
     elif message == 'Tipos':
         texto = "texto de tipos"
@@ -149,3 +150,9 @@ def message():
     else:
         return 'Lo siento, no entendí tu mensaje.'
     
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+#SET FLASK_APP=app.py
+#python app.py

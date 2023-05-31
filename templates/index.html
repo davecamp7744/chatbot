@@ -11,25 +11,28 @@
 </head>
 
 <body>
+  <div class="cabecera">
+    <div class="imagen">
+      <img src="../static/gifs/chatbotAnimated.gif" width="100px">
+    </div>
+    <div class="usuario">
+      <p>AsAD</p>
+      <p id="estado">En linea</p>
+    </div>
+  </div>
+
   <div class="centrar">
     <h1>Chatbot</h1>
-    <center>
       <div class="gift">
-        <img src="../static/gifs/chatbotAnimated.gif" width="200px">
-        <p class="saludo">Hola soy Iztak ¿Como te llamas?</p>
+        <p class="saludo separar">Hola soy AsAD ¿Como te llamas?</p>
       </div>
-      <input class="entrada" id="userinput" type="text" name="msg">
-      <button id="btn-enviar" class="enviar" onclick="send()">Enviar</button>
-    </center>
+      <div class="barram">
+        <input class="entrada" id="userinput" type="text" name="msg">
+        <button id="btn-enviar" class="enviar" onclick="send()">Enviar</button>
+      </div>
     <div id="chatbox"></div>
-    <!-- <form name="form" action="" method="get">
-        <h2>Cual es tu nombre</h2>
-        <input type="text" name="nombre">
-    </form>
-    <button class="enviar" onclick="sub()">Enviar nombre</button> -->
-    <!-- <button onclick="send_message('Tipos')" class="custom-btn btn-1">Tipos</button> -->
-    <button id="mi-boton" onclick="send_message('Comenzar')" class="custom-btn btn-16">Comenzar</button>
-    <p>Hola, puede comenzar escogiendo una opcion</p>
+    <button id="mi-boton" onclick="send_message('Comenzar')" class="custom-btn btn-16" style="display: none;">Comenzar</button>
+    <p class="separar" id="mi-mensaje" style="display: none;">Hola puede comenzar escogiendo una opcion</p>
       <div id="chat" class="comentarios"></div>
   </div>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>

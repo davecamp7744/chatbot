@@ -1,53 +1,53 @@
 //FUNCION PARA EL TEXTO
 function send_message(message) {
-$.ajax({
-    type: 'POST',
-    url: '/message',
-    data: { 'message': message },
-    success: function (response) {
-    $('#chat').append('<div>' + response + '</div>');
+  $.ajax({
+    type: "POST",
+    url: "/message",
+    data: { message: message },
+    success: function(response) {
+      $("#chat").append("<div>" + response + "</div>");
+      if (message === 'salir') {
+        $("#estado").text('Salio del chat');
+      }
+      setTimeout(scrollToBottom, 10);
     }
-});
+  });
 }
 
+function scrollToBottom() {
+  window.scrollTo({
+    top: window.pageYOffset + 2000,
+    behavior: "smooth"
+  });
+}
 
-//OCULTAR BUTTON
-const button = document.querySelector('#mi-boton');
-button.addEventListener('click', () => {
-    button.style.display = 'none';
+const button = document.querySelector("#mi-boton");
+button.addEventListener("click", () => {
+  button.style.display = "none";
 });
-const btnenvi = document.querySelector('#btn-enviar');
-btnenvi.addEventListener('click', () => {
-    btnenvi.style.display = 'none';
-})
-// const op = document.querySelector('#botones');
-// op.addEventListener('click', () => {
-//     op.style.display = 'none';
-// })
-//FUNCION PARA EL NOMBRE
+const btnenvi = document.querySelector("#btn-enviar");
+btnenvi.addEventListener("click", () => {
+  btnenvi.style.display = "none";
+});
+
 function send() {
-    var userinput = document.getElementById("userinput").value;
-    document.getElementById("chatbox").innerHTML += "<p><strong>Tú:</strong> " + userinput + "</p>";
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("chatbox").innerHTML += "<p><strong>Iztak:</strong> " + this.responseText + "</p>";
-        }
-    };
-    xhttp.open("GET", "/get?msg=" + userinput, true);
-    xhttp.send();
-    document.getElementById("userinput").value = "";
-};
+  var userinput = document.getElementById("userinput").value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("chatbox").innerHTML +=
+        "<p class='comentario burbuja'><strong>AsAD :</strong> " + this.responseText + "</p>";
+    }
+  };
+  xhttp.open("GET", "/get?msg=" + userinput, true);
+  xhttp.send();
+  document.getElementById("userinput").value = "";
+  var caja = document.querySelector(".barram");
+  caja.style.display = "none";
 
+  var boton = document.getElementById("mi-boton");
+  boton.style.display = "block";
 
-// const inpu = document.querySelector('#userinput');
-// inpu.addEventListener('click', () => {
-//     inpu.style.display = 'none';
-// });
-
-// var nombre = null;
-// var status = null;
-// function sub(){
-// nombre = document.getElementsByName("nombre")[0].value;
-// alert("Tu nombre es: ",nombre);
-// };
+  var msje = document.getElementById("mi-mensaje");
+  msje.style.display = "block";
+}
